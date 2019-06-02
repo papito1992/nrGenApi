@@ -18,7 +18,11 @@ public class NumberController {
     }
 
     @RequestMapping("/random_number_list")
-    public List<Integer> numberListGenerator() {
-        return randomNumberService.RandomNumberListGenerator();
+    public int[] numberListGenerator() {
+        return randomNumberService.RandomNumberArrayGenerator();
+    }
+    @RequestMapping("/random_number_list2")
+    public List<Long> numberListGenerator2() {
+        return randomNumberService.RandomNumberList2Generator();
     }
 }
